@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -23,55 +25,37 @@ public class Main {
 
 
     private static void task2(int[] arrayInt, double[] arrayDouble, String[] arrayString) {
-        for (int i = 0; i < arrayInt.length; i++) {
-            if(i == arrayInt.length - 1){
-                System.out.println(arrayInt[i]);
-                break;
-            }
+        for (int i = 0; i < arrayInt.length - 1; i++) {
             System.out.print(arrayInt[i] + ", ");
         }
+        System.out.println(arrayInt[arrayInt.length-1]);
 
-        for (int i = 0; i < arrayDouble.length; i++) {
-            if(i == arrayDouble.length - 1){
-                System.out.println(arrayDouble[i]);
-                break;
-            }
+        for (int i = 0; i < arrayDouble.length - 1; i++) {
             System.out.print(arrayDouble[i] + ", ");
         }
+        System.out.println(arrayDouble[arrayDouble.length - 1]);
 
-        for (int i = 0; i < arrayString.length; i++) {
-            if(i == arrayString.length - 1){
-                System.out.println(arrayString[i]);
-                break;
-            }
+        for (int i = 0; i < arrayString.length - 1; i++) {
             System.out.print(arrayString[i] + ", ");
         }
+        System.out.println(arrayString[arrayString.length - 1]);
     }
 
     private static void task3(int[] arrayInt, double[] arrayDouble, String[] arrayString) {
-        for (int i = arrayInt.length-1; i >= 0 ; i--) {
-            if(i == 0){
-                System.out.println(arrayInt[i]);
-                break;
-            }
+        for (int i = arrayInt.length-1; i > 0 ; i--) {
             System.out.print(arrayInt[i] + ", ");
         }
+        System.out.println(arrayInt[0]);
 
-        for (int i = arrayDouble.length - 1; i >= 0; i--) {
-            if(i == 0){
-                System.out.println(arrayDouble[i]);
-                break;
-            }
+        for (int i = arrayDouble.length - 1; i > 0; i--) {
             System.out.print(arrayDouble[i] + ", ");
         }
+        System.out.println(arrayDouble[0]);
 
-        for (int i = arrayString.length - 1; i >= 0; i--) {
-            if(i == 0){
-                System.out.println(arrayString[i]);
-                break;
-            }
+        for (int i = arrayString.length - 1; i > 0; i--) {
             System.out.print(arrayString[i] + ", ");
         }
+        System.out.println(arrayString[0]);
     }
 
     private static void task4(int[] arrayInt) {
@@ -79,11 +63,7 @@ public class Main {
             if(arrayInt[i]%2 != 0){
                 arrayInt[i]+=1;
             }
-            if(i == arrayInt.length - 1){
-                System.out.println(arrayInt[i]);
-                break;
-            }
-            System.out.print(arrayInt[i] + ", ");
         }
+        System.out.println(Arrays.toString(arrayInt));
     }
 }
